@@ -1,2 +1,0 @@
-- Site de poemas de Camões criado para fins de aprendizagem.
-- Os poemas foram copiados do site: <http://users.isr.ist.utl.pt/~cfb/VdS/camoes.html>
