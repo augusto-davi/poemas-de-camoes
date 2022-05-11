@@ -20,7 +20,6 @@ body {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  /* background-color: #bbb; */
 }
 
 .container__header {
@@ -53,10 +52,7 @@ body {
   padding: 1rem;
   padding-left: 1.5rem;
   width: 50%;
-  /* border: 1px solid #16251e; */
   background-image: linear-gradient(225deg, #f5f7fa 0%, #c3cfe2 100%);
-  /* border-top-right-radius: 4rem 1rem;
-  border-bottom-right-radius: 4rem 1rem; */
 }
 
 .works-section__list {
