@@ -15,22 +15,29 @@ body {
   background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   background-repeat: no-repeat;
 }
+
 .container {
   width: 80%;
   height: 100%;
   margin: 0 auto;
   /* background-color: #bbb; */
 }
+
 .container__header {
   display: flex;
   justify-content: center;
   height: 5rem;
 }
+
 .header__logo {
   background: url(../camoes.svg);
   background-size: 5rem;
   width: 5rem;
   height: 5rem;
+}
+
+.button {
+  display: none;
 }
 
 .container__content {
@@ -63,24 +70,17 @@ body {
   transition: 0.2s;
   border-bottom-left-radius: 1rem;
   background-color: rgba(11, 163, 96, 0.05);
-  /* border-bottom: 1px solid #16251e; */
+  font-family: "Radio Canada", sans-serif;
 }
 
 .list__poem:hover {
   background-color: #0ba360;
 }
 
-.selected-poem {
-  background-color: #0ba360;
-}
-
 .content__poem {
   width: 50%;
-  /* border: 1px solid #16251e; */
   overflow-y: scroll;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  /* border-top-left-radius: 4rem 1rem;
-  border-bottom-left-radius: 4rem 1rem; */
 }
 
 .poem__wrapper {
@@ -104,8 +104,4 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: rgb(25, 60, 64);
-}
-
-.button {
-  display: none;
 }
