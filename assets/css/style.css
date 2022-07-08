@@ -49,7 +49,7 @@ body {
 
 .content__works-section {
   overflow-y: scroll;
-  padding: 1rem;
+  padding: 0 1rem;
   padding-left: 1.5rem;
   width: 50%;
   background-image: linear-gradient(225deg, #f5f7fa 0%, #c3cfe2 100%);
