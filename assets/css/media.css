@@ -51,7 +51,6 @@
   .menu-hide {
     height: 0vh;
     width: 100vw;
-    padding: 0rem;
     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
     transition: 0.75s;
   }
