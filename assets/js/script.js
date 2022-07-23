@@ -1,43 +1,29 @@
-import poemsList from "./poems.js";
+import renderList from "./renderPoemsList.js";
 
-const content = document.querySelector(".poem__content");
-const list = document.querySelector(".works-section__list");
-const btn = document.querySelector(".button");
-
-function generateList() {
-  return poemsList
-    .map((poem) => {
-      return `
-      <a href poem="${poem.archive}">
-      <li class="list__poem">${poem.name}</li>
-      </a>
-    `;
-    })
-    .join("");
-}
-
-function renderPage() {
-  list.innerHTML = generateList();
-}
-
-renderPage();
-
-const poems = document.querySelectorAll("[poem]");
+const $poemField = document.querySelector(".poem__content");
+const $list = document.querySelector(".works-section__list");
+const $btn = document.querySelector(".button");
 const menu = document.querySelector(".menu-show");
 
-poems.forEach((link) => {
-  link.onclick = function (e) {
+$list.insertAdjacentHTML("afterbegin", renderList());
+
+const poems = document.querySelectorAll("[poem]");
+
+function fetchPoem(link) {
+  link.onclick = (e) => {
     e.preventDefault();
-    hideMenu();
+    if (window.innerWidth < 770) hideMenu();
 
     fetch(link.getAttribute("poem"))
-      .then((resp) => resp.text())
-      .then((html) => (content.innerHTML = html));
+      .then((response) => response.text())
+      .then((poem) => ($poemField.textContent = poem));
   };
-});
+}
+
+poems.forEach(fetchPoem);
 
 function flexMenu() {
-  btn.addEventListener("click", () => {
+  $btn.addEventListener("click", () => {
     if (menu.classList.toggle("menu-show")) {
       showMenu();
     } else {

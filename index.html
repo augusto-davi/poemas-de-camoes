@@ -18,31 +18,32 @@
       href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="assets/js/script.js" async></script>
   </head>
   <body>
-    <div class="container">
-      <header class="container__header">
-        <div class="header__logo"></div>
-        <div class="button">
-          <div class="button__bar"></div>
-          <div class="button__bar"></div>
-          <div class="button__bar"></div>
+    <div id="root">
+      <div class="container">
+        <header class="container__header">
+          <div class="header__logo"></div>
+          <div class="button">
+            <div class="button__bar"></div>
+            <div class="button__bar"></div>
+            <div class="button__bar"></div>
+          </div>
+        </header>
+        <div class="container__content">
+          <div class="content__works-section menu-show">
+            <nav class="menu-content">
+              <ul class="works-section__list"></ul>
+            </nav>
+          </div>
+          <main class="content__poem">
+            <section class="poem__wrapper">
+              <pre class="poem__content"></pre>
+            </section>
+          </main>
         </div>
-      </header>
-      <div class="container__content">
-        <div class="content__works-section menu-show">
-          <nav class="menu-content">
-            <ul class="works-section__list"></ul>
-          </nav>
-        </div>
-        <main class="content__poem">
-          <section class="poem__wrapper">
-            <pre class="poem__content"></pre>
-          </section>
-        </main>
       </div>
     </div>
-    <script type="module" src="assets/js/poems.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
   </body>
 </html>

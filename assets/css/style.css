@@ -89,7 +89,7 @@ body {
   line-height: 1.5rem;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 10px;
   padding: 2rem 0;
 }
@@ -100,4 +100,4 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: rgb(25, 60, 64);
-}
+} */
