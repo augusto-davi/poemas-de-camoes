@@ -49,7 +49,7 @@ let poems = [
   },
   {
     path: "poems/poem_013.txt",
-    title: "Ah! minha Dititlene! Assim deixaste",
+    title: "Ah! minha Dinamene! Assim deixaste",
   },
   {
     path: "poems/poem_014.txt",
