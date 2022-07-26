@@ -4,7 +4,7 @@
 
 ## Recursos
 
-- Os poemas foram retirados deste site: <http://users.isr.ist.utl.pt/~cfb/VdS/camoes.html>
+- Site de inspiração: <http://users.isr.ist.utl.pt/~cfb/VdS/camoes.html>
 - O logo pode ser encontrado aqui: [WorldVectorLogo](https://worldvectorlogo.com/pt/logo/instituto-camoes).
 
 ## Sobre o projeto
