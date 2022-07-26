@@ -1,3 +1,15 @@
+:root {
+  --bg-light: #3cba92;
+  --logo-light: var(var(--bg-light));
+  --bg-dark: #122b2e;
+  --logo-dark: rgb(25, 60, 64);
+  --font-color-dark: #0a1414;
+  --header-light: var(--bg-light);
+  --font-color-light: var(--bg-light);
+  --button-light: var(--logo-dark);
+  --button-dark: var(--bg-light);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +24,13 @@ a {
 body {
   height: 100vh;
   margin: 0;
-  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   background-repeat: no-repeat;
 }
 
 .container {
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
@@ -29,7 +42,7 @@ body {
 }
 
 .header__logo {
-  background: url(../camoes.svg);
+  fill: var(--bg-dark);
   background-size: 5rem;
   width: 5rem;
   height: 5rem;
@@ -49,10 +62,7 @@ body {
 
 .content__works-section {
   overflow-y: scroll;
-  padding: 0 1rem;
-  padding-left: 1.5rem;
   width: 50%;
-  background-image: linear-gradient(225deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .works-section__list {
@@ -62,9 +72,8 @@ body {
   margin: 1rem 0;
   padding: 0.25rem;
   padding-left: 1rem;
-  color: #16251e;
-  transition: 0.2s;
-  border-bottom-left-radius: 1rem;
+  color: var(--font-color-dark);
+  transition: all 0.2s;
   background-color: rgba(11, 163, 96, 0.05);
   font-family: "Radio Canada", sans-serif;
 }
@@ -76,7 +85,7 @@ body {
 .content__poem {
   width: 50%;
   overflow-y: scroll;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--font-color-dark);
 }
 
 .poem__wrapper {
@@ -85,19 +94,129 @@ body {
 }
 
 .poem__content {
-  width: 100%;
-  line-height: 1.5rem;
+  /* width: 100%; */
+  line-height: 3ch;
 }
 
-/* *::-webkit-scrollbar {
-  width: 10px;
-  padding: 2rem 0;
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg-dark);
+  }
+
+  .header__logo {
+    fill: var(--font-color-light);
+  }
+
+  .content__works-section {
+    background: var(--bg-dark);
+  }
+  .list__poem {
+    color: var(--font-color-light);
+  }
+
+  .content__poem {
+    background: var(--bg-dark);
+    color: var(--font-color-light);
+  }
 }
 
-*::-webkit-scrollbar-track {
-  background-color: rgb(25, 60, 64);
+/* Mobile & Tablets */
+@media (max-width: 770px) {
+  .container__header {
+    justify-content: space-between !important;
+    padding: 0 1rem;
+    align-items: center;
+    height: 5rem;
+    background: var(--header-light);
+  }
+
+  .container__content {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: calc(100vh - 5rem);
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 2.5rem;
+    height: 3rem;
+  }
+
+  .button__bar {
+    background-color: var(--button-light);
+    width: 100%;
+    height: 0.4rem;
+  }
+
+  .menu-show {
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    display: block;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  }
+
+  .menu-hide {
+    height: 0vh;
+    width: 100vw;
+    padding: 0rem;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  }
+
+  .menu-show,
+  .menu-hide {
+    z-index: 1;
+    transition: 0.75s;
+    position: fixed;
+  }
+
+  .content__poem {
+    height: calc(100vh - 5rem);
+    width: 100vw;
+  }
+
+  .poem__wrapper {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  .poem__content {
+    font-size: clamp(12px, calc(100vw / 30), 20px);
+    line-height: 2.5ch;
+  }
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(25, 60, 64);
-} */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg-dark);
+  }
+
+  .container__header {
+    background: var(--header-dark);
+  }
+
+  .header__logo {
+    fill: var(--font-color-light);
+  }
+
+  .button__bar {
+    background-color: var(--button-dark);
+  }
+
+  .content__works-section {
+    background: var(--bg-dark);
+  }
+  .list__poem {
+    color: var(--font-color-light);
+  }
+
+  .list__poem:hover {
+    color: var(--font-color-dark);
+  }
+
+  .content__poem {
+    background: var(--bg-dark);
+    color: var(--font-color-light);
+  }
+}

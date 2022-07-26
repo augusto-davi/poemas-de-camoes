@@ -1,6 +1,6 @@
-import poems from "./poems.js";
+import poems from "./poemsList.js";
 
-function renderList() {
+const renderList = () => {
   return poems
     .map((poem) => {
       return `
@@ -10,6 +10,9 @@ function renderList() {
         `;
     })
     .join("");
-}
+};
 
-export default renderList;
+const $list = document.querySelector(".works-section__list");
+const $poems = document.querySelectorAll("[poem]");
+
+export { renderList, $list };
