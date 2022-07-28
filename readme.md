@@ -4,7 +4,7 @@
 
 ## Recursos
 
-- Site de inspiração: <http://users.isr.ist.utl.pt/~cfb/VdS/camoes.html>
+- Site original: <http://users.isr.ist.utl.pt/~cfb/VdS/camoes.html>
 - O logo pode ser encontrado aqui: [WorldVectorLogo](https://worldvectorlogo.com/pt/logo/instituto-camoes).
 
 ## Sobre o projeto
@@ -15,8 +15,9 @@
 
 - Gerei a lista de poemas dinamicamente utilizando o método `map`, a fim de percorrer um array que contém objetos com o nome do poema e seu arquivo correspondente.
 - Ao ser clicado, o arquivo do poema em questão é acessado através de um `fetch` e exibido na mesma página.
-- Para dispositivos com dimensões de tela menores, é fornecido um menu hambúrguer que expande/recolhe o menu com a listagem de poemas. Esta é uma das partes deste projeto que mais precisam ser melhor trabalhadas.
+- Para dispositivos com dimensões de tela menores, é fornecido um ícone de menu hambúrguer que expande/recolhe o menu com a listagem de poemas. Esta é uma das partes deste projeto que mais precisam ser melhor trabalhadas.
 
 ### HTML e CSS
 
 - Procurei organizar as tags de maneira simples, dispondo os elementos com o apoio de `flexbox` e utilizando nomes de classes inspiradas no padrão `BEM`.
+- Dark mode está disponível caso o tema escuro do navegador esteja ativado.
